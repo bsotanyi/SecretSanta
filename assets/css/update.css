@@ -6,7 +6,9 @@
     font-stretch: normal;
     font-variant: normal;
     font-display: swap;
-    src: url("../fonts/opensans.woff2") format("woff2-variations");
+    src:
+      url("../fonts/opensans.woff2") format("woff2") tech("variations"), /* Futureproof. */
+      url("../fonts/opensans.woff2") format("woff2-variations"); /* fallback. */
 }
 
 /* Open Sans italic (variable). */
@@ -17,7 +19,13 @@
     font-stretch: normal;
     font-variant: normal;
     font-display: swap;
+<<<<<<< HEAD
     src: url("../fonts/opensans-italic.woff2") format("woff2-variations");
+=======
+    src:
+      url("../fonts/opensans-italic.woff2") format("woff2") tech("variations"), /* Futureproof. */
+      url("../fonts/opensans-italic.woff2") format("woff2-variations"); /* fallback. */
+>>>>>>> 99b77afa (Change CSS to support new Open Sans variable font.)
 }
 
 @font-face {
